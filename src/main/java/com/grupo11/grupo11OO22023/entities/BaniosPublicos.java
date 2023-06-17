@@ -2,13 +2,19 @@ package com.grupo11.grupo11OO22023.entities;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class BaniosPublicos extends DispositivoIOT {
+@Entity
+@Getter @Setter @NoArgsConstructor
+public class BaniosPublicos extends DispositivoIOT{
 	
 	@Column(name = "ocupado")
 	private boolean ocupado;
 	
-	@Column(name = "ocupado")
+	@Column(name = "nivelDeposito")
 	private int nivelDeposito;
 	
 	@Column(name = "horaUltimaLimpieza")
