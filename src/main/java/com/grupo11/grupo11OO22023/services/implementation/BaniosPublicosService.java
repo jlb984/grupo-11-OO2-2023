@@ -18,4 +18,8 @@ public class BaniosPublicosService implements IBaniosPublicosService {
 	public List<BaniosPublicos> lstBaniosPublicos(){
 		return iBaniosPublicosRepository.findAll();
 	}
+	
+	public BaniosPublicos saveBaniosPublicos(BaniosPublicos baniosPublicos) {
+		return iBaniosPublicosRepository.save(baniosPublicos);
+	}
 }
