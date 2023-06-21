@@ -1,3 +1,4 @@
+/*
 package com.grupo11.grupo11OO22023.repositories;
 
 import java.io.Serializable;
@@ -9,3 +10,4 @@ import com.grupo11.grupo11OO22023.entities.BaniosPublicos;
 public interface IBaniosPublicosRepository extends JpaRepository<BaniosPublicos, Serializable> {
 
 }
+*/

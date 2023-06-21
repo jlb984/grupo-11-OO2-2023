@@ -1,3 +1,4 @@
+/*`
 package com.grupo11.grupo11OO22023.entities;
 
 import java.time.LocalDateTime;
@@ -30,3 +31,4 @@ public class BaniosPublicos extends DispositivoIOT{
 	
 	
 }
+*/
