@@ -1,0 +1,19 @@
+<table>
+	<thead>
+		<tr>
+			<th>Nombre Lugar</th>
+			<th>Ciudad</th>
+			<th>Posicion GPS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="lugar : ${lugares}">
+			<td><span th:text="${lugar.nombreLugar}" /></td>
+			<td><span th:text="${lugar.ciudad}" /></td>
+			<td><span th:text="${lugar.posicionGPS}" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<a href="/lugar/formulario">Nuevo Lugar</a>
+
