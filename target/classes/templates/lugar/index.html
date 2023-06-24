@@ -1,4 +1,4 @@
-<table>
+<table border="1px">
 	<thead>
 		<tr>
 			<th>Nombre Lugar</th>
@@ -11,9 +11,17 @@
 			<td><span th:text="${lugar.nombreLugar}" /></td>
 			<td><span th:text="${lugar.ciudad}" /></td>
 			<td><span th:text="${lugar.posicionGPS}" /></td>
+			<td>
+				<a th:href="@{/lugar/{idLugar}(idLugar=${lugar.idLugar})}">Editar</button>
+			</td>
 		</tr>
 	</tbody>
 </table>
 
 <a href="/lugar/formulario">Nuevo Lugar</a>
+
+<form action="#" th:action="@{/lugar/nombre}" th:object="${lugar}" method="get">
+	<p>ingrese nombre <input type="text" th:field="*{nombreLugar}" /></p>
+	<input type="submit"/>
+</form>
 

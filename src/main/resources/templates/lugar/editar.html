@@ -1,0 +1,13 @@
+<form action="#" th:action="@{/lugar/editar}" th:object="${lugar}" method="post">
+	<input type="hidden" th:field="*{idLugar}" />
+	</p>
+	<p>
+		Nombre Lugar: <input type="text" th:field="*{nombreLugar}" />
+	</p>
+	<p>
+		Ciudad: <input type="text" th:field="*{ciudad}" />
+	</p><p>
+		Posicion GPS: <input type="text" th:field="*{posicionGPS}" />
+	</p>
+	<input type="submit" value="Editar" />
+</form>
