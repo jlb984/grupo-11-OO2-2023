@@ -1,53 +1,92 @@
 package com.grupo11.grupo11OO22023.entities;
 
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
-@Entity
-@DynamicInsert(true)
-@DynamicUpdate(true)
-@Table(name = "usuario")
-@PrimaryKeyJoinColumn(name = "idPersona")
-public class Usuario extends Persona{
+
+import lombok.Data;
+
+@Entity // persistence
+@Data // Lombok = auto-boilerplate
+@Table(name="user") // database
+public class Usuario {
 	
-	@Column(name = "email", unique = true)
-	private String email;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idUser;
 	
-	@Column(name = "username", unique = true, nullable = false, length = 45)
-	private String username;
+	// Variables in ascending order
+
 	
-	@Column(name = "password", nullable = false, length = 100)
-	private String password;
+	@NotNull
+	@Column(name="document")
+	private long document; // Example: 11.111.111
 	
-	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
-	@JoinColumn(name = "perfil_idPerfil", nullable = false)
-	private Perfil perfil;
+	@Column(name="enabled")
+	private boolean enabled; // active or not
 	
-	public Usuario() {}
+	@Email
+	@NotEmpty
+	@Column(name="email")
+	private String email; // Example: AAAAA@provider.domain
+
+	@Size(min=2, max=25)
+	@Column(name="name")
+	private String name; // Example: AAAAAA
 	
-	public Usuario(long idPersona,String nombre, String apellido, int dni, String email, String username, String password, Perfil perfil) {
-		super(idPersona,nombre, apellido, dni);
-		this.email = email;
-		this.username = username;
-		this.password = password;
-		this.perfil = perfil;
+	@Size(min=8) // Por el momento
+	@Column(name="password")
+	private String password; // Example: abcde11_UNLA
+	
+	@ManyToOne(cascade=CascadeType.PERSIST) // Relation with Role
+	@JoinColumn(name="idRole")
+	private Rol rol;
+	
+	@Size(min=2, max=30)
+	@Column(name="surname")
+	private String surname; // Example: BBBBBBB
+	
+	@Column(name="type")
+	private String type; // Example: L.E/DNI - CARNET EXT.
+	
+	@Size(min=4, max=20)
+	@Column(name="userName")
+	private String userName; // Example: unlaUser
+
+	public int getIdUser() {
+		return idUser;
 	}
 
-	public Usuario(String nombre, String apellido, int dni, String email, String username, String password, Perfil perfil) {
-		super(nombre, apellido, dni);
-		this.email = email;
-		this.username = username;
-		this.password = password;
-		this.perfil = perfil;
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}
+
+	public long getDocument() {
+		return document;
+	}
+
+	public void setDocument(long document) {
+		this.document = document;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 	public String getEmail() {
@@ -58,12 +97,12 @@ public class Usuario extends Persona{
 		this.email = email;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
@@ -74,14 +113,37 @@ public class Usuario extends Persona{
 		this.password = password;
 	}
 
-	public Perfil getPerfil() {
-		return perfil;
+	public Rol getRol() {
+		return rol;
 	}
 
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
+	public void setRol(Rol rol) {
+		this.rol = rol;
 	}
-	
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	
 	
 }
