@@ -63,7 +63,7 @@ public class LugarController {
 			lugar.setCiudad(lugarOriginal.getCiudad());
 			lugar.setPosicionGPS(lugarOriginal.getPosicionGPS());
 		}
-		lugarService.insertOrUpdate(lugar);
+		lugarService.insertOrUpdate(modelMapper.map(lugarModel, Lugar.class));
 		return new RedirectView(ViewRouteHelper.LUGAR_ROOT);
 	}
 	

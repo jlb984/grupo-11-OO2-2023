@@ -27,15 +27,12 @@ public class LugarService implements ILugarService {
 		return iLugarRepository.findAll();
 	}
 
-	
 
 	@Override
 	public LugarModel insertOrUpdate(Lugar lugar) {
 		Lugar lugarNuevo = iLugarRepository.save(lugar);
 		return modelMapper.map(lugarNuevo, LugarModel.class);
 	}
-
-
 
 	@Override
 	public Lugar findById(int idLugar) {
