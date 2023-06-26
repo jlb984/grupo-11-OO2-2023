@@ -20,7 +20,7 @@ import lombok.Setter;
 public abstract class DispositivoIOT {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	protected int idDispositivo;
 	
 	@Column(name = "nombre", nullable=false, length=45)
