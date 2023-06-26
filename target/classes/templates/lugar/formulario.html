@@ -1,8 +1,0 @@
-<form action="#" th:action="@{/lugar/nuevo}" th:object="${lugar}" method="post">
-	<p>Nombre Lugar <input type="text" th:field="*{nombreLugar}" /></p>
-	<p>Ciudad <input type="text" th:field="*{ciudad}" /></p>
-	<p th:if="${#fields.hasErrors('ciudad')}" th:errors="*{ciudad}">Ciudad has errors</p>
-	<p>Posicion GPS <input type="text" th:field="*{posicionGPS}" /></p>
-	<p th:if="${#fields.hasErrors('posicionGPS')}" th:errors="*{posicionGPS}">posicion GPS has errors</p>
-	<input type="submit"/>
-</form>
