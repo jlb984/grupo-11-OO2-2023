@@ -52,15 +52,15 @@ public class Security {
 		.hasRole("ADMIN") // ↑↑ Quien puede acceder a estas rutas
 		.requestMatchers(resourcesAnyRole) // Ingreso al inicio (publico)
 		.hasAnyRole("AUDIT", "ADMIN") // ↑↑ Cualquier Usuario
-		.and().formLogin() // Agrega el formulario de Login  // .failureUrl("/login?error=true")
-		.loginPage("/login").defaultSuccessUrl("/dispositivoiot").failureUrl("/login?error=true")  // Ruta de Login y en caso de credenciales invalidas
+		.and().formLogin() // Agrega el formulario de Login 
+		.loginPage("/login").defaultSuccessUrl("/index").permitAll().failureUrl("/login?error=true")  // Ruta de Login y en caso de credenciales invalidas
 		.and().logout().logoutUrl("/dispositivoiot").logoutSuccessUrl("/logout?logout=true") // Ruta de logout + a donde va cuando deslogea correctamente
 		.deleteCookies("JSESSIONID") // Para borrar la sesion y no quede 'invalida' por defecto (para el tratamiento de expired e invalid correcto)
 		.and().authorizeHttpRequests().requestMatchers("/logout").anonymous() // NO queremos que un usuario logeado acceda al Logout si sigue en sesion
 		.and().authorizeHttpRequests().requestMatchers("/login").anonymous() // NO queremos que un usuario logeado acceda al Login si sigue en sesion
 		.and().exceptionHandling().accessDeniedPage("/error/403") // Pagina de Acceso Denegado		
-		.and().sessionManagement().invalidSessionUrl("/logout?expired=true") // Cuando pase el tiempo de inactividad
-		.maximumSessions(1).expiredUrl("/logout?maximum=true"); // Solamente puede haber 1 sesion activa por usuario
+		.and().sessionManagement().invalidSessionUrl("/logout?expired=true"); // Cuando pase el tiempo de inactividad
+		
 	}
 	
 	public static String Encrypt(String password) // Encripta texto
