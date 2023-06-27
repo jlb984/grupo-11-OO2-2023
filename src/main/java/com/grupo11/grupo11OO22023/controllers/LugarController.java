@@ -17,6 +17,8 @@ import com.grupo11.grupo11OO22023.models.LugarModel;
 import com.grupo11.grupo11OO22023.services.ILugarService;
 import helpers.ViewRouteHelper;
 import jakarta.validation.Valid;
+import java.util.List;
+import java.util.ArrayList;
 
 
 @Controller
@@ -44,8 +46,10 @@ public class LugarController {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.LUGAR_INDEX);
 		mAV.addObject("lugares", lugarService.getAll());
 		mAV.addObject("lugar", new LugarModel());
+		mAV.addObject("string", new String());
 		return mAV;
 	}
+	
 	
 	@GetMapping("/{idLugar}")
 	public ModelAndView lugarId(@PathVariable("idLugar") int idLugar) {
