@@ -4,6 +4,7 @@ com\grupo11\grupo11OO22023\services\ILugarService.class
 com\grupo11\grupo11OO22023\services\implementation\BaniosPublicosService.class
 com\grupo11\grupo11OO22023\repositories\ILugarRepository.class
 com\grupo11\grupo11OO22023\services\implementation\DispositivoIOTService.class
+com\grupo11\grupo11OO22023\controllers\DispositivoIOTController.class
 com\grupo11\grupo11OO22023\services\IBaniosPublicosService.class
 com\grupo11\grupo11OO22023\services\IDispositivoIOTService.class
 com\grupo11\grupo11OO22023\entities\Lugar.class
