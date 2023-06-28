@@ -20,6 +20,8 @@ public class LugarModel {
 	
 	@Pattern(regexp = "^[a-zA-Z]\\w{3,14}$", message = "debe contener letras seguidos de numeros")
 	private String posicionGPS;
+	
+
 
 	public LugarModel(int idLugar, String nombreLugar, String ciudad, String posicionGPS) {
 		this.setIdLugar(idLugar);
@@ -27,6 +29,9 @@ public class LugarModel {
 		this.ciudad = ciudad;
 		this.posicionGPS = posicionGPS;
 	}
+	
+	
+
 	
 
 }

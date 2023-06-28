@@ -19,7 +19,6 @@ import com.grupo11.grupo11OO22023.services.ILugarService;
 import helpers.ViewRouteHelper;
 import jakarta.validation.Valid;
 
-
 @Controller
 @RequestMapping("/lugar")
 public class LugarController {

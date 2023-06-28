@@ -34,6 +34,38 @@ public class Lugar {
 		this.ciudad = ciudad;
 		this.posicionGPS = posicionGPS;
 	}
+
+	public int getIdLugar() {
+		return idLugar;
+	}
+
+	public void setIdLugar(int idLugar) {
+		this.idLugar = idLugar;
+	}
+
+	public String getNombreLugar() {
+		return nombreLugar;
+	}
+
+	public void setNombreLugar(String nombreLugar) {
+		this.nombreLugar = nombreLugar;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
+	public String getPosicionGPS() {
+		return posicionGPS;
+	}
+
+	public void setPosicionGPS(String posicionGPS) {
+		this.posicionGPS = posicionGPS;
+	}
 	
 	
 	

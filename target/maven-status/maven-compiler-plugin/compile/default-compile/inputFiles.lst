@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\BaniosPublicos.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\ILugarRepository.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IBaniosPublicosService.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\BaniosPublicosService.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\DispositivoIOTService.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\controllers\DispositivoIOTController.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\DispositivoIOT.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IDispositivoIOTService.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IBaniosPublicosRepository.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\Grupo11Oo22023Application.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\LugarService.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\Lugar.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IDispositivoIOTRepository.java
+D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\ILugarService.java
+=======
+>>>>>>> f2ec902a409d1d3eee9cb4948df417f067f603a8
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IDispositivoIOTService.java
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\Grupo11Oo22023Application.java
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IBaniosPublicosRepository.java
@@ -22,3 +41,7 @@ C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-1
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\controllers\LugarController.java
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\ILugarService.java
 C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\DispositivoIOT.java
+<<<<<<< HEAD
+=======
+>>>>>>> 2493a6a375b389e3ae3ee232584ad73e6bbac5fa
+>>>>>>> f2ec902a409d1d3eee9cb4948df417f067f603a8
