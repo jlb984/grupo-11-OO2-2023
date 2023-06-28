@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
-
 @Controller
-@RequestMapping ("/")
+@RequestMapping("/")
 public class HomeController {
 
-@GetMapping 
-public ModelAndView home(){
-	return new ModelAndView("/index");
-}
-
+	@GetMapping("/index")
+	public ModelAndView index() {
+		return new ModelAndView("/index");
+	}
 	
+	@GetMapping("/agregar")
+	public ModelAndView agregar() {
+		return new ModelAndView("/agregar");
+	}
 }

@@ -17,8 +17,7 @@ import com.grupo11.grupo11OO22023.models.LugarModel;
 import com.grupo11.grupo11OO22023.services.ILugarService;
 import helpers.ViewRouteHelper;
 import jakarta.validation.Valid;
-import java.util.List;
-import java.util.ArrayList;
+
 
 
 @Controller

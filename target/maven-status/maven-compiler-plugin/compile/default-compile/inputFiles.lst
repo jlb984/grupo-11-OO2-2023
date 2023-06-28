@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\BaniosPublicos.java
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\ILugarRepository.java
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IBaniosPublicosService.java
@@ -12,3 +13,26 @@ D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\im
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\Lugar.java
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IDispositivoIOTRepository.java
 D:\TP_oo2\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\ILugarService.java
+=======
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IDispositivoIOTService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\Grupo11Oo22023Application.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IBaniosPublicosRepository.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\LugarService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\UsuarioDetalleService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\IBaniosPublicosService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\security\Security.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\BaniosPublicos.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\Lugar.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IDispositivoIOTRepository.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\DispositivoIOTService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\controllers\DispositivoIOTController.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\IUsuarioRepository.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\Rol.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\Usuario.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\implementation\BaniosPublicosService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\helpers\ViewRouteHelper.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\repositories\ILugarRepository.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\controllers\HomeController.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\services\ILugarService.java
+C:\Users\Veronica\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\grupo-11-OO2-2023\src\main\java\com\grupo11\grupo11OO22023\entities\DispositivoIOT.java
+>>>>>>> 2493a6a375b389e3ae3ee232584ad73e6bbac5fa
