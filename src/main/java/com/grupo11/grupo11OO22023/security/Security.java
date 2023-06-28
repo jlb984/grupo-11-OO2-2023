@@ -31,6 +31,7 @@ public class Security {
 	
 	protected void configure(HttpSecurity http) throws Exception // Configura las auth (Concepto) a partir de los roles
 	{
+		/*
 
 		String [] resourcesAdmin = new String[] {
 				"/role/addRole/**", "/role/edit/**", "/role/delete", // Roles
@@ -60,7 +61,16 @@ public class Security {
 		.and().authorizeHttpRequests().requestMatchers("/login").anonymous() // NO queremos que un usuario logeado acceda al Login si sigue en sesion
 		.and().exceptionHandling().accessDeniedPage("/error/403") // Pagina de Acceso Denegado		
 		.and().sessionManagement().invalidSessionUrl("/logout?expired=true"); // Cuando pase el tiempo de inactividad
+		*/
 		
+		http.authorizeHttpRequests()
+		.requestMatchers("/css/*", "/imgs/*", "/js/*", "/vendor/*").permitAll()
+	.and()
+		.formLogin().loginPage("/login").loginProcessingUrl("/loginprocess")
+		.usernameParameter("username").passwordParameter("password")
+		.defaultSuccessUrl("/index").permitAll().failureUrl("/404")
+	.and()
+		.logout().logoutUrl("/logout").logoutSuccessUrl("/logout").permitAll();;
 	}
 	
 	public static String Encrypt(String password) // Encripta texto

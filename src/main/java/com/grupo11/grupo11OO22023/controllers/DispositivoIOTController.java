@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.servlet.ModelAndView;
 
 import com.grupo11.grupo11OO22023.entities.DispositivoIOT;
 import com.grupo11.grupo11OO22023.services.implementation.DispositivoIOTService;
+
+import helpers.ViewRouteHelper;
 
 @RestController
 @RequestMapping("/dispositivoiot")
@@ -20,8 +22,14 @@ public class DispositivoIOTController {
 	
 	@Autowired
 	private DispositivoIOTService dispositivoIOTService;
+	/*
+	@GetMapping(value="/agregar")
+	public ModelAndView agregar() {//el nombre nada que ver
+		ModelAndView modelAndView = new ModelAndView(ViewRouteHelper.HOME_AGREGAR);
+		return modelAndView;
+	}
 	
-	
+	*/
 //	@Autowired
 //	private BaniosPublicosService baniosPublicosService;
 	
