@@ -48,7 +48,7 @@ public class Security {
 				.requestMatchers(resourcesAnyRole) // Ingreso al inicio (publico)
 				.hasAnyRole("AUDIT", "ADMIN") // ↑↑ Cualquier Usuario
 				.and().formLogin() // Agrega el formulario de Login
-				.loginPage("/login").defaultSuccessUrl("/index").permitAll().failureUrl("/login?error=true") // Ruta de
+				.loginPage("/login").defaultSuccessUrl("/index").permitAll().failureUrl("/404") // Ruta de
 																												// Login
 																												// y en
 																												// caso
