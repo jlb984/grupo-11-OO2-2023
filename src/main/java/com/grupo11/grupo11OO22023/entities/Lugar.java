@@ -13,6 +13,8 @@ import lombok.Setter;
 @Getter @Setter @NoArgsConstructor
 public class Lugar {
 
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idLugar;
@@ -25,6 +27,14 @@ public class Lugar {
 	
 	@Column(name = "posicionGPS", nullable=false, length=45)
 	private String posicionGPS;
+
+	public Lugar(String nombreLugar, String ciudad, String posicionGPS) {
+		super();
+		this.nombreLugar = nombreLugar;
+		this.ciudad = ciudad;
+		this.posicionGPS = posicionGPS;
+	}
+	
 	
 	
 }
