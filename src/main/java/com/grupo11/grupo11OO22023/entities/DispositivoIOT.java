@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Getter @Setter @NoArgsConstructor
 public abstract class DispositivoIOT {
 
@@ -33,7 +33,7 @@ public abstract class DispositivoIOT {
 	@Column(name = "estaActivo")
 	protected boolean estaActivo;
 	
-	@Column(name = "descrpcion", length = 200)
+	@Column(name = "descripcion", length = 200)
 	protected String descripcion;
 
 	public DispositivoIOT(int idDispositivo, String nombre, Lugar lugar, boolean estaActivo, String descripcion) {
