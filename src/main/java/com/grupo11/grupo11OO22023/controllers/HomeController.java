@@ -20,4 +20,9 @@ public class HomeController {
 	public ModelAndView agregar() {
 		return new ModelAndView("/agregar");
 	}
+	
+	@GetMapping("/acerca-de")
+	public ModelAndView acerca(){
+		return new ModelAndView("/acerca-de");
+	}
 }
