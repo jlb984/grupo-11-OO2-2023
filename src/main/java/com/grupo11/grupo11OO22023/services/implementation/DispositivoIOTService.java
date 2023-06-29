@@ -1,28 +1,35 @@
 package com.grupo11.grupo11OO22023.services.implementation;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.grupo11.grupo11OO22023.entities.DispositivoIOT;
+import com.grupo11.grupo11OO22023.entities.Lugar;
 import com.grupo11.grupo11OO22023.repositories.IDispositivoIOTRepository;
 import com.grupo11.grupo11OO22023.services.IDispositivoIOTService;
 
-@Service
+@Service("dispositivoIOTService")
 public class DispositivoIOTService implements IDispositivoIOTService {
 	
 	@Autowired
-	private IDispositivoIOTRepository DispositivoIOTRepository;
+	@Qualifier("dispositivoIOTRepository")
+	private IDispositivoIOTRepository iDispositivoIOTRepository;
 	
-	
-	public List<DispositivoIOT> lstDispositivosIOT() {
+	@Override
+	public List<DispositivoIOT> getAll() {
 
-		return DispositivoIOTRepository.findAll();
+		return iDispositivoIOTRepository.findAll();
 	}
 	
-	public Optional<DispositivoIOT> getDispositivoIOTporId(int id){
-		return DispositivoIOTRepository.findById(id);
+	@Override
+	public DispositivoIOT findByIdDispositivo(int id){
+		return iDispositivoIOTRepository.findByIdDispositivo(id);
+	}
+	
+	@Override
+	public List<DispositivoIOT> findByLugar(Lugar lugar){
+		return iDispositivoIOTRepository.findByLugar(lugar);
 	}
 }
