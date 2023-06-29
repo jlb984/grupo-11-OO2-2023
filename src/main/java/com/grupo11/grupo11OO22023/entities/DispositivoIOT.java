@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Getter @Setter @NoArgsConstructor
 public abstract class DispositivoIOT {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	protected int idDispositivo;
 	
 	@Column(name = "nombre", nullable=false, length=45)
@@ -33,7 +33,7 @@ public abstract class DispositivoIOT {
 	@Column(name = "estaActivo")
 	protected boolean estaActivo;
 	
-	@Column(name = "descrpcion", length = 200)
+	@Column(name = "descripcion", length = 200)
 	protected String descripcion;
 
 	public DispositivoIOT(int idDispositivo, String nombre, Lugar lugar, boolean estaActivo, String descripcion) {
