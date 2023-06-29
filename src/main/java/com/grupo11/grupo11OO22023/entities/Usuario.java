@@ -46,7 +46,7 @@ public class Usuario {
 	@Column(name="name")
 	private String name; // Example: AAAAAA
 	
-	@Size(min=8) // Por el momento
+	@Size(min=8) 
 	@Column(name="password")
 	private String password; // Example: abcde11_UNLA
 	
@@ -56,10 +56,10 @@ public class Usuario {
 	
 	@Size(min=2, max=30)
 	@Column(name="surname")
-	private String surname; // Example: BBBBBBB
+	private String surname; 
 	
 	@Column(name="type")
-	private String type; // Example: L.E/DNI - CARNET EXT.
+	private String type; 
 	
 	@Size(min=4, max=20)
 	@Column(name="userName")

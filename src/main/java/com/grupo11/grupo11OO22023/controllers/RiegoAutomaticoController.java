@@ -28,26 +28,8 @@ public class RiegoAutomaticoController {
 		return mAV;
 	}
 	
-	/*
-	private ModelMapper modelMapper = new ModelMapper(); 
 	
-	 
-	 @GetMapping("") //cual funciona?
-		public RedirectView root2() {
-			return new RedirectView(ViewRouteHelper.DISPOSITIVO_RIEGO_ROOT);
-		}
 	
-	 
-	
-	 @GetMapping("/index")
-	public ModelAndView index() {
-		ModelAndView mAV = new ModelAndView(ViewRouteHelper.RIEGO_INDEX);
-		mAV.addObject("riegosAutomaticos", iriegoAutomaticoService.getAll());
-		mAV.addObject("riego", new RiegoAutomatico());
-		mAV.addObject("string", new String());
-		return mAV;
-	}
-	  */
 	
 	
 }
