@@ -1,6 +1,4 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,6 +14,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<header>
         <div class="container">
             <header
@@ -47,6 +46,75 @@
     
 	
 	
+=======
+	<div class="container">
+		<header
+			class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+			<a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+
+				<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+					<link href="imgs/logo.png">
+				</svg>
+			</a>
+
+			<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+				<li><a th:href="@{index}" class="nav-link px-2 link-secondary">Home</a></li>
+				<li><a href="#myCarousel" class="nav-link px-2 link-dark">Auditoria</a></li>
+				<li><a th:href="@{agregar}" class="nav-link px-2 link-dark">Agregar</a></li>
+				<li><a th:href="@{modificar}" class="nav-link px-2 link-dark">Modificar</a></li>
+				<li><a th:href="@{acerca-de}" class="nav-link px-2 link-dark">Acerca de</a></li>
+			</ul>
+
+			<div class="col-md-3 text-end">
+				<button type="button" class="btn btn-outline-primary me-2">Login</button>
+				<button type="button" class="btn btn-primary">Sign-up</button>
+			</div>
+		</header>
+	</div>
+
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+				aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" th:each="lugar : ${lugares}">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col">Lugar</th>
+							<td><span th:text="${lugar.nombreLugar}" /></td>
+						</tr>
+						<tr>
+							<th scope="col">Dispositivo</th>
+							<th scope="col">Nombre</th>
+							<th scope="col">Descripcion</th>
+							<th scope="col">Activo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table-active" th:each="dispositivo : ${dispositivos}" th:each="banio : ${banios}">
+							<td><span th:text="${dispositivo.idDispositivo}" /></td>
+							<td><span th:text="${dispositivo.nombre}" /></td>
+							<td><span th:text="${dispositivo.descripcion}" /></td>
+							<td><span th:text="${dispositivo.activo}" /></td>
+						</tr>
+					</tbody>
+				</table>
+				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+	</div>
+>>>>>>> 47169386e7c04889acc0ba1536a4ad6eadff109d
 
 
     <div class="container">
@@ -60,6 +128,7 @@
                 </svg>
             </a>
 
+<<<<<<< HEAD
             <ul class="nav col-md-4 justify-content-end">
                 <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#myCarousel" class="nav-link px-2 text-muted">Auditoria</a></li>
@@ -71,5 +140,23 @@
     </div>
     
     
+=======
+			<ul class="nav col-md-4 justify-content-end">
+				<li class="nav-item"><a th:href="@{index}" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a href="#myCarousel" class="nav-link px-2 text-muted">Auditoria</a></li>
+				<li class="nav-item"><a th:href="@{agregar}" class="nav-link px-2 text-muted">Agregar</a></li>
+				<li class="nav-item"><a th:href="@{modificar}" class="nav-link px-2 text-muted">Modificar</a></li>
+				<li class="nav-item"><a th:href="@{acerca_de}" class="nav-link px-2 text-muted">Acerca de</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+		integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+		integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+		crossorigin="anonymous"></script>
+>>>>>>> 47169386e7c04889acc0ba1536a4ad6eadff109d
 </body>
 </html>

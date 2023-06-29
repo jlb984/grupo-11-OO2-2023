@@ -1,4 +1,4 @@
-package com.grupo11.grupo11OO22023.controllers;
+ package com.grupo11.grupo11OO22023.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,6 @@ public class LugarController {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.LUGAR_INDEX);
 		mAV.addObject("lugares", lugarService.getAll());
 		mAV.addObject("lugar", new LugarModel());
-		mAV.addObject("string", new String());
 		return mAV;
 	}
 	

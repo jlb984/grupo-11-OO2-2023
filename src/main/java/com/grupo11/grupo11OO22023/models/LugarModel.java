@@ -22,7 +22,6 @@ public class LugarModel {
 	private String posicionGPS;
 	
 
-
 	public LugarModel(int idLugar, String nombreLugar, String ciudad, String posicionGPS) {
 		this.setIdLugar(idLugar);
 		this.nombreLugar = nombreLugar;

@@ -41,8 +41,6 @@ public class LugarService implements ILugarService {
 		return iLugarRepository.findByIdLugar(idLugar);
 	}
 
-
-
 	@Override
 	public List<LugarModel> findByNombreLugar(String nombre) {
 		List<LugarModel> lugares = new ArrayList<>();
