@@ -7,7 +7,7 @@ import com.grupo11.grupo11OO22023.entities.Lugar;
 
 public interface IDispositivoIOTService  {
 	
-	public DispositivoIOT findById(int id);
+	public DispositivoIOT findByIdDispositivo(int id);
 	
 	public List<DispositivoIOT> findByLugar(Lugar lugar);
 

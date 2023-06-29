@@ -27,6 +27,11 @@ public class BaniosPublicosController {
 	private IBaniosPublicosService baniosPublicosService;
 
 	private ModelMapper modelMapper = new ModelMapper();
+	
+	@GetMapping("")
+	public RedirectView root() {
+		return new RedirectView(ViewRouteHelper.BANIO_ROOT);
+	}
 
 	@GetMapping("/new")
 	public ModelAndView agregar() {

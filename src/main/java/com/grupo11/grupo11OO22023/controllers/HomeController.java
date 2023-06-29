@@ -11,7 +11,7 @@ import helpers.ViewRouteHelper;
 @RequestMapping("/")
 public class HomeController {
 
-	@GetMapping("")
+	@GetMapping("/index")
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView(ViewRouteHelper.INDEX);
 		return modelAndView;

@@ -15,6 +15,7 @@ public class ViewRouteHelper {
 	//Redirects
 	
 	public final static String LUGAR_ROOT = "/lugar/index";
+	public final static String BANIO_ROOT = "/banios/vista";
 	
 
 	

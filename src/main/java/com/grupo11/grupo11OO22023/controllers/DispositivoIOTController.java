@@ -2,6 +2,7 @@ package com.grupo11.grupo11OO22023.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,7 @@ import com.grupo11.grupo11OO22023.services.implementation.DispositivoIOTService;
 
 import helpers.ViewRouteHelper;
 
-@RestController
+@Controller
 @RequestMapping("/dispositivo")
 public class DispositivoIOTController {
 	
@@ -25,7 +26,7 @@ public class DispositivoIOTController {
 	@GetMapping("/{idDispositivo}")
 	public ModelAndView IdDispositivo(@PathVariable("idDispositivo") int id) {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.INDEX);
-		DispositivoIOT aux = new DispositivoIOTService().findById(id);
+		DispositivoIOT aux = new DispositivoIOTService().findByIdDispositivo(id);
 		mAV.addObject("dispositivoId", aux);
 		return mAV;
 	}

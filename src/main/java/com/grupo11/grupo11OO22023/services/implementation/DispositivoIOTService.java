@@ -10,11 +10,11 @@ import com.grupo11.grupo11OO22023.entities.Lugar;
 import com.grupo11.grupo11OO22023.repositories.IDispositivoIOTRepository;
 import com.grupo11.grupo11OO22023.services.IDispositivoIOTService;
 
-@Service("/dispositivoService")
+@Service("dispositivoIOTService")
 public class DispositivoIOTService implements IDispositivoIOTService {
 	
 	@Autowired
-	@Qualifier("dispositivoRepository")
+	@Qualifier("dispositivoIOTRepository")
 	private IDispositivoIOTRepository iDispositivoIOTRepository;
 	
 	@Override
@@ -24,12 +24,12 @@ public class DispositivoIOTService implements IDispositivoIOTService {
 	}
 	
 	@Override
-	public DispositivoIOT findById(int id){
+	public DispositivoIOT findByIdDispositivo(int id){
 		return iDispositivoIOTRepository.findByIdDispositivo(id);
 	}
 	
 	@Override
 	public List<DispositivoIOT> findByLugar(Lugar lugar){
-		return iDispositivoIOTRepository.findBy(lugar);
+		return iDispositivoIOTRepository.findByLugar(lugar);
 	}
 }
