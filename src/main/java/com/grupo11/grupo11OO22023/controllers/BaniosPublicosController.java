@@ -28,12 +28,12 @@ public class BaniosPublicosController {
 
 	private ModelMapper modelMapper = new ModelMapper();
 	
-	@GetMapping("")
+	@GetMapping("/")
 	public RedirectView root() {
 		return new RedirectView(ViewRouteHelper.BANIO_ROOT);
 	}
 
-	@GetMapping("/new")
+	@GetMapping("/banio_formulario")
 	public ModelAndView agregar() {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.BANIO_AGREGAR);
 		mAV.addObject("banio", new BaniosModel());
@@ -41,9 +41,9 @@ public class BaniosPublicosController {
 	}
 
 	@PostMapping("/save")
-	public RedirectView guardar(@Valid @ModelAttribute("banio") BaniosModel baniosModel, BindingResult bindingResult) {
+	public RedirectView guardar(@Valid @ModelAttribute("banio") BaniosModel baniosModel) {
 		baniosPublicosService.insertOrUpdate(modelMapper.map(baniosModel, BaniosPublicos.class));
-		return new RedirectView(ViewRouteHelper.AGREGAR);
+		return new RedirectView(ViewRouteHelper.BANIO_ROOT);
 
 	}
 
@@ -52,7 +52,6 @@ public class BaniosPublicosController {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.BANIO_VISTA);
 		mAV.addObject("banios", baniosPublicosService.getAll());
 		mAV.addObject("banio", new BaniosModel());
-		mAV.addObject("string", new String());
 		return mAV;
 	}
 

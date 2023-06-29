@@ -44,7 +44,6 @@ public class LugarController {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelper.LUGAR_INDEX);
 		mAV.addObject("lugares", lugarService.getAll());
 		mAV.addObject("lugar", new LugarModel());
-		mAV.addObject("string", new String());
 		return mAV;
 	}
 	

@@ -16,14 +16,12 @@ public class BaniosModel extends DispositivoIOT{
 	
 	private int nivelDeposito;
 	
-	private LocalDateTime horaUltimaLimpieza;
 
 	public BaniosModel(int idDispositivo, String nombre, Lugar lugar, boolean estaActivo, String descripcion, boolean ocupado, int nivelDeposito, LocalDateTime horaUltimaLimpieza) {
 		super(idDispositivo, nombre, lugar, estaActivo, descripcion);
 		// TODO Auto-generated constructor stub
 		this.ocupado = ocupado;
 		this.nivelDeposito = nivelDeposito;
-		this.horaUltimaLimpieza = horaUltimaLimpieza;
 	}
 	
 	
