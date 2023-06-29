@@ -50,12 +50,12 @@
 			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		</div>
 		<div class="carousel-inner">
-			<div class="carousel-item active">
+			<div class="carousel-item active" th:each="lugar : ${lugares}">
 				<table class="table table-hover">
 					<thead>
 						<tr>
 							<th scope="col">Lugar</th>
-							<td>Column content</td>
+							<td><span th:text="${lugar.nombreLugar}" /></td>
 						</tr>
 						<tr>
 							<th scope="col">Dispositivo</th>
@@ -65,11 +65,11 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="table-active">
-							<th scope="row">Active</th>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
+						<tr class="table-active" th:each="dispositivo : ${dispositivos}" th:each="banio : ${banios}">
+							<td><span th:text="${dispositivo.idDispositivo}" /></td>
+							<td><span th:text="${dispositivo.nombre}" /></td>
+							<td><span th:text="${dispositivo.descripcion}" /></td>
+							<td><span th:text="${dispositivo.activo}" /></td>
 						</tr>
 					</tbody>
 				</table>
@@ -82,70 +82,6 @@
 					<span class="visually-hidden">Next</span>
 				</button>
 			</div>
-			<div class="carousel-item">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">Lugar</th>
-							<td>Column content</td>
-						</tr>
-						<tr>
-							<th scope="col">Dispositivo</th>
-							<th scope="col">Nombre</th>
-							<th scope="col">Descripcion</th>
-							<th scope="col">Activo</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="table-active">
-							<th scope="row">Active</th>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-						</tr>
-					</tbody>
-				</table>
-				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
-		</div>
-		<div class="carousel-item">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th scope="col">Lugar</th>
-						<td>Column content</td>
-					</tr>
-					<tr>
-						<th scope="col">Dispositivo</th>
-						<th scope="col">Nombre</th>
-						<th scope="col">Descripcion</th>
-						<th scope="col">Activo</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="table-active">
-						<th scope="row">Active</th>
-						<td>Column content</td>
-						<td>Column content</td>
-						<td>Column content</td>
-					</tr>
-				</tbody>
-			</table>
-			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
 		</div>
 	</div>
 
@@ -162,11 +98,11 @@
 			</a>
 
 			<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a th:href="@{index}" class="nav-link px-2 text-muted">Home</a></li>
 				<li class="nav-item"><a href="#myCarousel" class="nav-link px-2 text-muted">Auditoria</a></li>
-				<li class="nav-item"><a href="agregar.html" class="nav-link px-2 text-muted">Agregar</a></li>
-				<li class="nav-item"><a href="modificar.html" class="nav-link px-2 text-muted">Modificar</a></li>
-				<li class="nav-item"><a href="acerca-de.html" class="nav-link px-2 text-muted">Acerca de</a></li>
+				<li class="nav-item"><a th:href="@{agregar}" class="nav-link px-2 text-muted">Agregar</a></li>
+				<li class="nav-item"><a th:href="@{modificar}" class="nav-link px-2 text-muted">Modificar</a></li>
+				<li class="nav-item"><a th:href="@{acerca_de}" class="nav-link px-2 text-muted">Acerca de</a></li>
 			</ul>
 		</footer>
 	</div>

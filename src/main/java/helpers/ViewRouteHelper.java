@@ -2,8 +2,9 @@ package helpers;
 
 public class ViewRouteHelper {
 
-	//Views
-	
+	//Banio
+	public final static String BANIO_AGREGAR = "banios/formulario";
+	public final static String BANIO_VISTA = "banios/vista";
 	//Lugar
 	public final static String LUGAR_INDEX = "lugar/index";
 	public final static String LUGAR_FORMULARIO = "lugar/formulario";
@@ -21,25 +22,16 @@ public class ViewRouteHelper {
 		public final static String ERROR_403="error/403";
 	
 	// HOME
-		public final static String HOME_INDEX = "home/index";
-		public final static String HOME_LOGIN = "home/login";
-		public final static String HOME_LOGOUT = "home/logout";
-		public final static String HOME_ABOUT_US = "home/about-us";
-		public final static String HOME_USER = "home/user";
+		public final static String INDEX = "index";
+		public final static String AGREGAR = "agregar";
+		public final static String MODIFICAR = "modificar";
+		public final static String ACERCA_DE = "acerca_de";
+		public final static String LOGIN = "login";
+		public final static String HOME_LOGOUT = "logout";
+		public final static String HOME_USER = "user";
 	
 		
-	//PROFILE
-		public final static String PERFILES = "profile/listaPerfiles";
-		public final static String PROFILE_FORM = "profile/form";
-		
-	// REDIRECT
-		public final static String HOME_ROUTE = "redirect:/";
-		public final static String ROUTE_PERFILES = "redirect:/perfil/listarPerfil";
-		public final static String USUARIO_ROOT = "redirect:/usuario";
-		
-	// USER
-		public final static String USUARIOS = "usuario/listaUsuarios";
-		public final static String USUARIO_FORM = "usuario/form";
+	
 		
 	
 

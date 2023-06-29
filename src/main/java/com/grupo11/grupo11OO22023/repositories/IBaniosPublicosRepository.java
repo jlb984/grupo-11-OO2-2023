@@ -8,5 +8,6 @@ import com.grupo11.grupo11OO22023.entities.BaniosPublicos;
 
 @Repository("baniosPublicosRepository")
 public interface IBaniosPublicosRepository extends JpaRepository<BaniosPublicos, Serializable> {
+	
 
 }

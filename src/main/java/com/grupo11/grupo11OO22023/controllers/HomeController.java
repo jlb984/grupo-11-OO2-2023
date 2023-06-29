@@ -5,22 +5,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import helpers.ViewRouteHelper;
+
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/")
 public class HomeController {
 
-	@GetMapping("/index")
+	@GetMapping("")
 	public ModelAndView index() {
-		return new ModelAndView("/index");
+		ModelAndView modelAndView = new ModelAndView(ViewRouteHelper.INDEX);
+		return modelAndView;
 	}
 	
 	@GetMapping("/agregar")
 	public ModelAndView agregar() {
-		return new ModelAndView("/agregar");
+		return new ModelAndView(ViewRouteHelper.AGREGAR);
 	}
 	
 	@GetMapping("/acerca-de")
-	public ModelAndView acerca(){
-		return new ModelAndView("/acerca-de");
+	public String acerca(){
+		return ViewRouteHelper.ACERCA_DE;
 	}
+	
+	
 }
