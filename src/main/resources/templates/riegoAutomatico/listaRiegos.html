@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<title>Listado de riegosAutomaticcos</title>
+</head>
+
+<body class="masthead">
+	<div th:replace="fragments/menu"></div>
+	
+	<div class="mb-5"></div>
+	<div class="main">
+		<table class="table table-bordered table-dark table-striped table-sm" style="width: 1000px; margin: 0 auto;">
+			<thead>
+				<tr>
+					<th>RiegoAutomatico</th>
+					<th>Nombre</th>
+					<th>Descripcion</th>
+					<th>Niveldehumedad</th>
+					<th>niveldeUV</th>
+					
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="riegoAutomatico : ${riegoAutomaticos}">
+					<td> <span th:text="${riegoAutomatico.descripcion}"> </td>
+					<td> <span th:text="${riegoAutomatico.nombre}"> </td>
+					<td> <span th:text="${riegoAutomatico.nivelHumedad}"> </td>
+					<td> <span th:text="${riegoAutomatico.nivelUV}"> </td>
+					
+				</tr>
+			</tbody>
+		</table>
+		<div class="mb-2"></div>
+		
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -17,7 +17,6 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a th:href="@{index}" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="agregar.html" class="nav-link px-2 link-dark">Agregar</a></li>
         <li><a href="modificar.html" class="nav-link px-2 link-dark">Modificar</a></li>
         <li><a th:href="@{acerca-de}" class="nav-link px-2 link-dark">Acerca de</a></li>
       </ul>
@@ -32,20 +31,27 @@
 <div class="container">
 	<form>
 	  <div class="form-group">
-	    <label for="exampleFormControlSelect1">Lugar </label><button type="button" class="btn btn-primary btn-sm"><a th:href="@{lugar/formulario}" class="nav-link px-2">Nuevo</a></button>
-	    <select class="form-control" id="exampleFormControlSelect1">
-	      <option>1</option>
-	      <option>2</option>
-	     <option>3</option>
-	    </select>
+	    <label for="lugar" >Lugar </label><button type="button" class="btn btn-primary btn-sm"><a th:href="@{lugar/formulario}" class="nav-link px-2">Nuevo</a></button>
+	 <!-- <select th:field ="*{lugar/index)}" name= "lugar" class="form-control" NOSE COMO PASARLE LA LISTA >
+	      <option 
+	       
+	      th:each="lugar:${lugares}" 
+	      th:value="${lugar}"
+	      th:text="${lugar.nombreLugar}">OPCIONES</option>
+	      
+	    </select> -->
+	    
+	    <select class="form-control">
+		<option>TRAER LISTA DE LUGARES</option>
+		</select> 
 	    	
 	  </div>
 	  <div class="form-group">
 	    <label for="exampleFormControlSelect1">Dispositivo</label>
 	    <select class="form-control" id="exampleFormControlSelect1">
-	      <option>1</option>
-	      <option>2</option>
-	     <option>3</option>
+	      <option>Riego Automatico</option>
+	      <option>Banios Publicos</option>
+	     <option>Iluminacion</option>
 	    </select>
 	  </div>
 	  <div class="form-group">

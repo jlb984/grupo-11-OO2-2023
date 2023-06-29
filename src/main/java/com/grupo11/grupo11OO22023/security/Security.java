@@ -1,6 +1,7 @@
 package com.grupo11.grupo11OO22023.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration // Clase de configuracion Spring
+@ComponentScan("converters")
 @EnableMethodSecurity
 @EnableWebSecurity // Habilita la seguridad Web
 public class Security {

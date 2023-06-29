@@ -9,14 +9,18 @@ public class ViewRouteHelper {
 	public final static String LUGAR_FORMULARIO = "lugar/formulario";
 	public final static String LUGAR_NUEVO = "lugar/nuevo";
 	public final static String LUGAR_EDITAR = "lugar/editar";
-	
+	public final static String LIST_LUGARES = "/lugares";
+
 	
 	//Redirects
 	
 	public final static String LUGAR_ROOT = "/lugar/index";
-	
+	//Dispositivo Riego Automatico
+	public final static String RIEGO_INDEX = "riegoAutomatico/index";
+	public final static String DISPOSITIVO_RIEGO_ROOT = "/riegoAutomatico/index";
+	public final static String DISPOSITIVO_RIEGO_NUEVO= "/riegoAutomatico/nuevo";
+	public final static String RIEGOAUTOMATICOS= "/riegoAutomatico/listaRiegos";
 
-	
 	// ERROR
 		public final static String ERROR_403="error/403";
 	

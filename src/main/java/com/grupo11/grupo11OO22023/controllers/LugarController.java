@@ -16,9 +16,9 @@ import org.springframework.web.servlet.view.RedirectView;
 import com.grupo11.grupo11OO22023.entities.Lugar;
 import com.grupo11.grupo11OO22023.models.LugarModel;
 import com.grupo11.grupo11OO22023.services.ILugarService;
+
 import helpers.ViewRouteHelper;
 import jakarta.validation.Valid;
-
 @Controller
 @RequestMapping("/lugar")
 public class LugarController {
@@ -47,6 +47,9 @@ public class LugarController {
 		mAV.addObject("string", new String());
 		return mAV;
 	}
+	
+	
+	
 	
 	
 	@GetMapping("/{idLugar}")
@@ -91,6 +94,20 @@ public class LugarController {
 		lugarService.insertOrUpdate(modelMapper.map(lugarModel, Lugar.class));
 		return new RedirectView(ViewRouteHelper.LUGAR_ROOT);
 	}
-
+	
+	
+//---------------------------------------------------------------------------------
+	/*
+	@GetMapping("")
+	public String lugar(Model model)
+	{
+		List<Lugar> listLugares = new ArrayList<Lugar>();
+		 listLugares= lugarService.getAll(); // var = Lombok
+		
+		
+		model.addAttribute("listLugar", listLugares);
+		
+		return "/agregar";
+	}*/
 
 }
